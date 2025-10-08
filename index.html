@@ -5,10 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional fence installation in Waco, TX. Licensed & insured fence company serving McLennan County. Cedar, vinyl, chain link fencing. Free estimates!">
     <link rel="canonical" href="https://wacofenceexperts.netlify.app/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <title>Waco Fence Experts | Professional Fence Installation in Waco, TX</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Waco Fence Experts | Professional Fence Installation in Waco, TX">
+    <meta property="og:description" content="Transform your property with quality fencing built to last. Licensed & insured fence company serving McLennan County. Cedar, vinyl, chain link. Free estimates!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wacofenceexperts.netlify.app/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Waco Fence Experts">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Waco Fence Experts | Professional Fence Installation">
+    <meta name="twitter:description" content="Professional fence installation in Waco, TX. Licensed & insured. Cedar, vinyl, chain link fencing. Free estimates!">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🏡</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🏡</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BZUJ5yyxRwXvGKJNLd4ysYWvswJFsL2C6J7mE26oJzPTZHzJhV2KpgUaJX8dMiA0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Google Analytics 4 - Replace G-XXXXXXXXXX with your actual measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
     <style>
         * {
             margin: 0;
@@ -101,8 +129,8 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(92, 64, 51, 0.8), rgba(92, 64, 51, 0.8)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23D4A574" width="1200" height="600"/><text x="50%25" y="50%25" font-size="24" fill="%235C4033" text-anchor="middle" dominant-baseline="middle" opacity="0.3">HERO IMAGE: Wood fence background or happy family in backyard</text></svg>');
+            background: linear-gradient(rgba(92, 64, 51, 0.75), rgba(92, 64, 51, 0.75)),
+                        url('/images/cedar-fence-hero.jpg');
             background-size: cover;
             background-position: center;
             color: var(--white);
@@ -295,6 +323,31 @@
             margin-bottom: 1rem;
         }
 
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--sage-green);
+        }
+
+        .faq-question {
+            color: var(--primary-brown);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            color: #555;
+            line-height: 1.7;
+        }
+
         .cta-section {
             background: var(--primary-brown);
             color: var(--white);
@@ -408,6 +461,36 @@
             border-top: 1px solid #444;
         }
 
+        /* Accessibility improvements */
+        *:focus-visible {
+            outline: 3px solid var(--sage-green);
+            outline-offset: 2px;
+        }
+
+        .btn:focus-visible,
+        .phone-number:focus-visible,
+        .submit-btn:focus-visible {
+            outline: 3px solid var(--secondary-tan);
+            outline-offset: 3px;
+        }
+
+        /* Skip to main content link for screen readers */
+        .skip-to-main {
+            position: absolute;
+            left: -9999px;
+            z-index: 999;
+            padding: 1rem;
+            background: var(--sage-green);
+            color: white;
+            text-decoration: none;
+        }
+
+        .skip-to-main:focus {
+            left: 50%;
+            transform: translateX(-50%);
+            top: 10px;
+        }
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -436,8 +519,9 @@
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="/" class="logo">🏡 Waco Fence Experts</a>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
@@ -446,11 +530,12 @@
                 <li><a href="#testimonials">Reviews</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="tel:2542947791" class="phone-number">📞 (254) 294-7791</a>
-            <button class="mobile-menu">☰</button>
+            <a href="tel:2542947791" class="phone-number"><i class="fas fa-phone"></i> (254) 294-7791</a>
+            <button class="mobile-menu" aria-label="Open menu" aria-expanded="false">☰</button>
         </nav>
     </header>
 
+    <main id="main-content">
     <section class="hero">
         <h1>Professional Fence Installation in Waco, TX</h1>
         <p>Transform Your Property with Quality Fencing Built to Last. Licensed & Insured. Serving McLennan County.</p>
@@ -464,7 +549,7 @@
         <h2 style="text-align: center; color: var(--primary-brown); font-size: 2.5rem;">Our Fencing Services</h2>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">🏠</div>
+                <div class="service-icon"><i class="fas fa-home"></i></div>
                 <h3>Residential Fence Installation</h3>
                 <p>Beautiful, durable fencing for Waco homes. Cedar, vinyl, and chain link options designed to enhance your property's privacy, security, and curb appeal.</p>
                 <a href="/cedar-fence-installation.html">Cedar Fencing →</a><br>
@@ -472,13 +557,13 @@
                 <a href="/chain-link-fence.html">Chain Link →</a>
             </div>
             <div class="service-card">
-                <div class="service-icon">🏢</div>
+                <div class="service-icon"><i class="fas fa-building"></i></div>
                 <h3>Commercial Fencing Solutions</h3>
                 <p>Secure your business property with professional-grade fencing. We serve warehouses, schools, apartment complexes, and businesses throughout McLennan County.</p>
                 <a href="/commercial-fencing.html">Learn More →</a>
             </div>
             <div class="service-card">
-                <div class="service-icon">🔧</div>
+                <div class="service-icon"><i class="fas fa-tools"></i></div>
                 <h3>Fence Repair & Staining</h3>
                 <p>Extend the life of your existing fence. Expert repair services and professional staining to protect your investment from Texas weather.</p>
                 <a href="/fence-repair.html">Learn More →</a>
@@ -491,25 +576,36 @@
             <h2 style="text-align: center; color: var(--primary-brown); font-size: 2.5rem; margin-bottom: 1rem;">Why Waco Homeowners Trust Us</h2>
             <div class="trust-grid">
                 <div class="trust-item">
-                    <div class="trust-icon">✓</div>
+                    <div class="trust-icon"><i class="fas fa-shield-alt"></i></div>
                     <h3>Licensed & Insured</h3>
                     <p>Fully licensed and insured for your peace of mind</p>
                 </div>
                 <div class="trust-item">
-                    <div class="trust-icon">📍</div>
+                    <div class="trust-icon"><i class="fas fa-map-marker-alt"></i></div>
                     <h3>Local Waco Experts</h3>
                     <p>Proudly serving McLennan County communities</p>
                 </div>
                 <div class="trust-item">
-                    <div class="trust-icon">⭐</div>
+                    <div class="trust-icon"><i class="fas fa-star"></i></div>
                     <h3>Quality Materials</h3>
                     <p>Premium fencing materials built for Texas weather</p>
                 </div>
                 <div class="trust-item">
-                    <div class="trust-icon">💰</div>
+                    <div class="trust-icon"><i class="fas fa-dollar-sign"></i></div>
                     <h3>Free Estimates</h3>
                     <p>No-obligation quotes on all projects</p>
                 </div>
+                <div class="trust-item">
+                    <div class="trust-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Fast Response</h3>
+                    <p>We respond within 2 hours during business hours</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: white; border-radius: 8px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h3 style="color: var(--primary-brown); margin-bottom: 0.75rem;">Business Hours</h3>
+                <p style="margin-bottom: 0.25rem;"><strong>Monday - Friday:</strong> 7:00 AM - 6:00 PM</p>
+                <p style="margin-bottom: 0.25rem;"><strong>Saturday:</strong> 8:00 AM - 4:00 PM</p>
+                <p><strong>Sunday:</strong> Closed (Emergency repairs available)</p>
             </div>
         </div>
     </section>
@@ -540,11 +636,45 @@
         <p style="font-size: 1.2rem; margin-top: 1rem;">Proudly serving Waco, Woodway, Hewitt, Lorena, McGregor, Robinson, and surrounding Central Texas communities</p>
     </section>
 
+    <section class="container" id="faq">
+        <h2 style="text-align: center; color: var(--primary-brown); font-size: 2.5rem; margin-bottom: 2rem;">Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3 class="faq-question">How much does fence installation cost?</h3>
+                <p class="faq-answer">Fence costs vary based on materials, height, length, and terrain. Cedar privacy fences typically range $20-35 per linear foot installed. Chain link runs $10-20 per foot, and vinyl $25-40 per foot. We provide free, detailed estimates with no obligation.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">How long does installation take?</h3>
+                <p class="faq-answer">Most residential fence installations take 2-5 days depending on size and complexity. We'll provide a specific timeline during your free estimate. Weather and ground conditions can affect the schedule.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Do I need a permit for a fence in Waco?</h3>
+                <p class="faq-answer">In most cases, yes. The City of Waco requires permits for fences over 6 feet tall. We handle all permitting and ensure your fence meets local codes and HOA requirements.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">What's the best fence material for Texas weather?</h3>
+                <p class="faq-answer">Cedar is naturally rot-resistant and handles Texas heat well. Vinyl never needs painting and resists warping. Chain link is extremely durable. We'll recommend the best option based on your budget, needs, and property.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Do you offer warranties?</h3>
+                <p class="faq-answer">Yes! We provide a 1-year workmanship warranty on all installations. Material warranties vary by manufacturer - cedar and vinyl typically come with 10+ year warranties.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Can you repair my existing fence?</h3>
+                <p class="faq-answer">Absolutely! We repair damaged posts, replace broken pickets, fix gates, and restain weathered wood. Often repairs are more cost-effective than full replacement. Call for same-day assessment.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="cta-section" id="contact">
         <h2>Ready to Get Started?</h2>
         <p style="font-size: 1.2rem; margin-bottom: 1rem;">Get your free estimate today. Call us at (254) 294-7791 or fill out the form below.</p>
         
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <p style="display: none;">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
             <div class="form-row">
                 <div class="form-group">
                     <label for="name">Name *</label>
@@ -576,15 +706,19 @@
                 <textarea id="message" name="message" placeholder="Tell us about your project..."></textarea>
             </div>
             <button type="submit" class="submit-btn">Request Free Quote</button>
+            <div id="form-success" style="display: none; margin-top: 1rem; padding: 1rem; background: #8A9A5B; color: white; border-radius: 5px; text-align: center;">
+                ✓ Thank you! We'll contact you within 2 hours during business hours.
+            </div>
         </form>
     </section>
+    </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Waco Fence Experts</h3>
                 <p>Professional fence installation and repair services in Waco, TX and McLennan County.</p>
-                <p style="margin-top: 1rem;">📞 (254) 294-7791</p>
+                <p style="margin-top: 1rem;"><i class="fas fa-phone"></i> (254) 294-7791</p>
             </div>
             <div class="footer-section">
                 <h3>Services</h3>
@@ -641,6 +775,20 @@
             "latitude": 31.5493,
             "longitude": -97.1467
         },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "07:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "08:00",
+                "closes": "16:00"
+            }
+        ],
         "areaServed": ["Waco", "Woodway", "Hewitt", "Lorena", "McGregor", "Robinson"],
         "priceRange": "$$",
         "aggregateRating": {
@@ -652,15 +800,22 @@
     </script>
 
     <script>
+        // Netlify Forms handles submission automatically, but we can add UX enhancements
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your interest! This is a demo form. In production, this would send your information to the business owner.');
+            const submitBtn = this.querySelector('.submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
         });
 
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            const navLinks = document.querySelector('.nav-links');
+        const mobileMenuBtn = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        function toggleMobileMenu() {
             if (navLinks.style.display === 'flex') {
                 navLinks.style.display = 'none';
+                mobileMenuBtn.textContent = '☰';
+                mobileMenuBtn.setAttribute('aria-label', 'Open menu');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
             } else {
                 navLinks.style.display = 'flex';
                 navLinks.style.flexDirection = 'column';
@@ -671,7 +826,22 @@
                 navLinks.style.background = 'white';
                 navLinks.style.padding = '1rem';
                 navLinks.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+                navLinks.style.zIndex = '999';
+                mobileMenuBtn.textContent = '✕';
+                mobileMenuBtn.setAttribute('aria-label', 'Close menu');
+                mobileMenuBtn.setAttribute('aria-expanded', 'true');
             }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+        // Close menu when clicking on a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    toggleMobileMenu();
+                }
+            });
         });
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

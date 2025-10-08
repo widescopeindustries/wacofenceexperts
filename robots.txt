@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Disallow crawling of Google verification file
+Disallow: /googlecb10dada35205f18.html
+
+# Sitemap
 Sitemap: https://wacofenceexperts.netlify.app/sitemap.xml
