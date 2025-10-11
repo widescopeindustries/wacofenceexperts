@@ -5,4 +5,4 @@ Allow: /
 Disallow: /googlecb10dada35205f18.html
 
 # Sitemap
-Sitemap: https://wacofenceexperts.netlify.app/sitemap.xml
+Sitemap: https://wacofenceexperts.com/sitemap.xml
